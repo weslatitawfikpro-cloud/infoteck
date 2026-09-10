@@ -302,7 +302,20 @@ footer{
   text-align:center;
   padding:22px;
 }
+.service-image{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:20px;
+  display:block;
+  transition:transform .35s ease, box-shadow .35s ease;
+}
 
+.card:hover .service-image{
+  transform:scale(1.025);
+  box-shadow:0 10px 25px rgba(38,15,58,.15);
+}
 @media(max-width:900px){
   nav a:not(.rdv){
     display:none;
@@ -436,7 +449,7 @@ footer{
 
 <section id="choix-rendezvous">
 
-  <div class="section-label">Rendez-vous</div>
+  
   <h2>Choisissez votre service</h2>
 
   <p class="intro">
@@ -446,7 +459,7 @@ footer{
   <div class="services">
 
     <div class="card">
-      <div class="icon">🔧</div>
+      <img src="infoteck_reparation.png" alt="Réparation et diagnostic informatique" class="service-image">
       <h3>Réparation & diagnostic</h3>
       <p>Mac, PC, smartphones, dépannage, diagnostic et optimisation.</p>
 
@@ -458,7 +471,7 @@ footer{
     </div>
 
     <div class="card">
-      <div class="icon">🎨</div>
+      <img src="infoteck_creation_graphique.png" alt="Création graphique" class="service-image">
       <h3>Création graphique</h3>
       <p>Logo, carte de visite, flyer, affiche et visuels pour réseaux sociaux.</p>
 
