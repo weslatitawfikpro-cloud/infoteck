@@ -154,9 +154,21 @@ section h2{
 }
 
 .services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+}
+
+.services .card{
+    grid-column:span 2;
+}
+
+.services .card:nth-child(4){
+    grid-column:2 / span 2;
+}
+
+.services .card:nth-child(5){
+    grid-column:4 / span 2;
 }
 
 .card{
@@ -296,9 +308,13 @@ footer{
     font-size:43px;
   }
 
-  .services{
+ .services{
     grid-template-columns:1fr 1fr;
-  }
+}
+
+.services .card{
+    grid-column:auto;
+}
 
   .products{
     grid-template-columns:1fr;
