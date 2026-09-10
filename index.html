@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>InfoTeck | Réparation Mac, PC et smartphones</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:#17121f;
+  background:#fff;
+  line-height:1.6;
+}
+
+header{
+  background:white;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 15px rgba(0,0,0,.07);
+}
+
+.logo{
+  font-size:28px;
+  font-weight:800;
+  color:#27113f;
+}
+
+.logo span{
+  color:#7138d4;
+}
+
+nav a{
+  text-decoration:none;
+  color:#241c2c;
+  margin-left:25px;
+  font-size:15px;
+}
+
+nav .rdv{
+  background:#6428c7;
+  color:white;
+  padding:12px 20px;
+  border-radius:9px;
+}
+
+.hero{
+  min-height:560px;
+  padding:90px 7%;
+  color:white;
+  background:
+    radial-gradient(circle at 75% 30%, #793fd2 0%, transparent 28%),
+    linear-gradient(120deg,#190c2d,#32134f 50%,#52228a);
+  display:flex;
+  align-items:center;
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.small-title{
+  color:#c7a8ff;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-size:58px;
+  line-height:1.08;
+  margin-bottom:22px;
+}
+
+.hero p{
+  font-size:20px;
+  color:#eee5fa;
+  max-width:630px;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.button{
+  display:inline-block;
+  padding:15px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.primary{
+  background:#702cff;
+  color:white;
+}
+
+.secondary{
+  border:1px solid white;
+  color:white;
+}
+
+.trust{
+  display:flex;
+  gap:35px;
+  margin-top:45px;
+  flex-wrap:wrap;
+}
+
+.trust div{
+  color:#eee4fa;
+}
+
+section{
+  padding:75px 7%;
+}
+
+.section-label{
+  color:#6428c7;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+section h2{
+  font-size:38px;
+  margin:5px 0 10px;
+}
+
+.intro{
+  color:#666;
+  margin-bottom:35px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.card{
+  border:1px solid #e8e2ee;
+  padding:28px;
+  border-radius:14px;
+  box-shadow:0 7px 25px rgba(38,15,58,.06);
+  background:white;
+}
+
+.icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin-bottom:12px;
+}
+
+.card ul{
+  padding-left:20px;
+  color:#555;
+}
+
+.booking{
+  margin:10px 7% 30px;
+  padding:35px 45px;
+  background:linear-gradient(110deg,#3c146a,#6d2ac6);
+  border-radius:16px;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.booking h2{
+  font-size:28px;
+}
+
+.booking a{
+  background:white;
+  color:#361359;
+  text-decoration:none;
+  padding:15px 25px;
+  border-radius:10px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+.used{
+  background:#faf9fc;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.product{
+  padding:30px;
+  background:white;
+  border:1px solid #e9e4ed;
+  border-radius:14px;
+}
+
+.product-placeholder{
+  height:150px;
+  background:#f2eef6;
+  border-radius:10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.price{
+  color:#55209b;
+  font-size:23px;
+  font-weight:bold;
+  margin-top:12px;
+}
+
+.contact{
+  background:#241035;
+  color:white;
+}
+
+.contact p{
+  color:#ded2e8;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.contact a{
+  color:white;
+}
+
+footer{
+  background:#15091f;
+  color:#bcaec8;
+  text-align:center;
+  padding:22px;
+}
+
+@media(max-width:900px){
+  nav a:not(.rdv){
+    display:none;
+  }
+
+  .hero{
+    padding-top:70px;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .services{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+  header{
+    padding:15px 5%;
+  }
+
+  .logo{
+    font-size:23px;
+  }
+
+  nav .rdv{
+    padding:10px 12px;
+    font-size:13px;
+  }
+
+  .hero{
+    padding:70px 6%;
+    min-height:520px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  section{
+    padding:55px 6%;
+  }
+
+  section h2{
+    font-size:30px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .booking{
+    margin:10px 5% 30px;
+    padding:28px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Info<span>Teck</span><small>.com</small></div>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#appareils">Appareils usagés</a>
+    <a href="#contact">Contact</a>
+    <a class="rdv" href="#rendezvous">📅 Prendre rendez-vous</a>
+  </nav>
+</header>
+
+
+<section class="hero" id="accueil">
+
+  <div class="hero-content">
+
+    <div class="small-title">
+      Réparation • Optimisation • Conseils
+    </div>
+
+    <h1>Vos appareils<br>entre bonnes mains.</h1>
+
+    <p>
+      Réparation Mac, PC et smartphones.
+      Solutions fiables pour particuliers et PME.
+      Service sur rendez-vous à Terrebonne et environs.
+    </p>
+
+    <div class="buttons">
+      <a class="button primary" href="#rendezvous">
+        📅 Prendre rendez-vous
+      </a>
+
+      <a class="button secondary" href="#services">
+        Voir les services
+      </a>
+    </div>
+
+    <div class="trust">
+      <div>✓ Service professionnel</div>
+      <div>✓ Diagnostic</div>
+      <div>✓ Particuliers & PME</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="services">
+
+  <div class="section-label">Nos services</div>
+
+  <h2>Des solutions pour tous vos appareils</h2>
+
+  <p class="intro">
+    Diagnostic, réparation, installation et optimisation.
+  </p>
+
+
+  <div class="services">
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>MacBook & iMac</h3>
+
+      <ul>
+        <li>Diagnostic et réparation</li>
+        <li>Remplacement de batterie</li>
+        <li>SSD et mise à niveau</li>
+        <li>Installation macOS</li>
+        <li>Optimisation</li>
+      </ul>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">🖥️</div>
+      <h3>PC Windows</h3>
+
+      <ul>
+        <li>Réparation matérielle</li>
+        <li>Installation Windows</li>
+        <li>Nettoyage et optimisation</li>
+        <li>Suppression de logiciels malveillants</li>
+        <li>Récupération de données</li>
+      </ul>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Smartphones</h3>
+
+      <ul>
+        <li>iPhone et Android</li>
+        <li>Remplacement d'écran</li>
+        <li>Remplacement de batterie</li>
+        <li>Problèmes de charge</li>
+        <li>Configuration et transfert</li>
+      </ul>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">⚙️</div>
+      <h3>Logiciels & optimisation</h3>
+
+      <ul>
+        <li>Installation de logiciels</li>
+        <li>Optimisation des performances</li>
+        <li>Sauvegarde</li>
+        <li>Configuration</li>
+        <li>Conseils personnalisés</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="booking" id="rendezvous">
+
+  <div>
+    <h2>📅 Prenez rendez-vous facilement</h2>
+    <p>
+      Choisissez votre service et une plage horaire qui vous convient.
+    </p>
+  </div>
+
+  <a href="mailto:infoteck.service@gmail.com?subject=Demande%20de%20rendez-vous%20InfoTeck">
+    Demander un rendez-vous →
+  </a>
+
+</div>
+
+
+<section class="used" id="appareils">
+
+  <div class="section-label">Appareils usagés</div>
+
+  <h2>Mac, PC et téléphones vérifiés</h2>
+
+  <p class="intro">
+    Appareils testés et prêts à l'emploi. Les disponibilités changent régulièrement.
+  </p>
+
+
+  <div class="products">
+
+    <div class="product">
+      <div class="product-placeholder">💻</div>
+      <h3>MacBook</h3>
+      <p>Modèles disponibles selon l'inventaire.</p>
+      <div class="price">Nous contacter</div>
+    </div>
+
+
+    <div class="product">
+      <div class="product-placeholder">🖥️</div>
+      <h3>PC portables</h3>
+      <p>Ordinateurs inspectés, testés et configurés.</p>
+      <div class="price">Nous contacter</div>
+    </div>
+
+
+    <div class="product">
+      <div class="product-placeholder">📱</div>
+      <h3>Smartphones</h3>
+      <p>iPhone et autres smartphones selon disponibilité.</p>
+      <div class="price">Nous contacter</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="contact-grid">
+
+    <div>
+      <div class="section-label">InfoTeck</div>
+
+      <h2>Besoin d'aide avec votre appareil ?</h2>
+
+      <p>
+        Contactez-nous pour un diagnostic, une réparation
+        ou pour vérifier la disponibilité d'un appareil usagé.
+      </p>
+    </div>
+
+
+    <div>
+      <h3>Contact</h3>
+
+      <p>📞 <a href="tel:+15146060730">(514) 606-0730</a></p>
+
+      <p>
+        ✉️
+        <a href="mailto:infoteck.service@gmail.com">
+          infoteck.service@gmail.com
+        </a>
+      </p>
+
+      <p>📍 Terrebonne, Québec</p>
+
+      <p>
+        Service sur rendez-vous.<br>
+        Les détails du lieu sont communiqués lors de la confirmation.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 InfoTeck — Réparation Mac, PC & smartphones
+</footer>
+
+</body>
+</html>
