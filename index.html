@@ -350,7 +350,7 @@ footer{
   transform:scale(1.025);
   box-shadow:0 10px 25px rgba(38,15,58,.15);
 }
-@media(max-width:1200px){
+@media(max-width:1400px){
   nav a:not(.rdv){
     display:none;
   }
@@ -363,10 +363,9 @@ footer{
     font-size:43px;
   }
 
- .services{
-    grid-template-columns:1fr 1fr;
+.services{
+  grid-template-columns:repeat(3, 1fr);
 }
-
 .services .card{
     grid-column:auto;
 }
@@ -379,7 +378,11 @@ footer{
     grid-template-columns:1fr;
   }
 }
-
+@media(max-width:900px){
+  .services{
+    grid-template-columns:1fr 1fr;
+  }
+}
 @media(max-width:600px){
   header{
     padding:15px 5%;
