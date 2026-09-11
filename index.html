@@ -257,7 +257,15 @@ section h2{
   font-size:50px;
   margin-bottom:20px;
 }
-
+.product-image{
+  width:100%;
+  height:200px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  margin:0 auto 20px;
+  border-radius:10px;
+}
 .price{
   color:#55209b;
   font-size:23px;
@@ -626,7 +634,7 @@ footer{
   <div class="products">
 
     <div class="product">
-      <div class="product-placeholder">💻</div>
+      <img src="macusage.png" alt="MacBook usagé" class="product-image">
       <h3>MacBook</h3>
       <p>Modèles disponibles selon l'inventaire.</p>
       <div class="price">Nous contacter</div>
@@ -634,7 +642,7 @@ footer{
 
 
     <div class="product">
-      <div class="product-placeholder">🖥️</div>
+      <img src="pcusage.png" alt="PC portable usagé" class="product-image">
       <h3>PC portables</h3>
       <p>Ordinateurs inspectés, testés et configurés.</p>
       <div class="price">Nous contacter</div>
@@ -642,7 +650,7 @@ footer{
 
 
     <div class="product">
-      <div class="product-placeholder">📱</div>
+      <img src="cellusage.png" alt="Smartphone usagé" class="product-image">
       <h3>Smartphones</h3>
       <p>iPhone et autres smartphones selon disponibilité.</p>
       <div class="price">Nous contacter</div>
